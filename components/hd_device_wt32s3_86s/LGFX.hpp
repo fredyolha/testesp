@@ -32,7 +32,7 @@
 #define I2C_TOUCH_FREQUENCY 100000
 #define TOUCH_SDA 19
 #define TOUCH_SCL 20
-#define TOUCH_IRQ NC
+#define TOUCH_IRQ GPIO_NUM_NC
 #define TOUCH_RST 38
 
 namespace esphome {
@@ -121,7 +121,7 @@ public:
       cfg.bus_shared = false;
       cfg.offset_rotation = 0;
 
-      cfg.i2c_port = I2C_NUM_0;
+      cfg.i2c_port = 1;
 
       cfg.pin_int = TOUCH_IRQ;
       cfg.pin_sda = TOUCH_SDA;
